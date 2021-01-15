@@ -15,7 +15,7 @@
 
 <h1>Github 프로그램 이용방법 - 꼭 순서대로 할 것!</h1>
 <ul>위쪽 메뉴바에 Fetch먼저 눌러 새로고침 후, Pull(파란색 버튼) 누르기</ul>
-<ul>Atom에서 수정 -> Ctrl+s를 눌러 저장</ul>
+<ul>Atom에서 수정 -> Ctrl+s를 눌러 저장 - 여기서 꼭 Atom을 종료할 필요는 없음</ul>
 <ul>자신이 수정한 부분을 Github프로그램 왼쪽 창에서 확인</ul>
 <ul>왼쪽 하단의 Commit to SITE-8 누르기(SITE-8은 Branch이름)</ul>
 <ul>오른쪽의 Push버튼 확인 후, 클릭</ul>
