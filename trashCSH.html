@@ -3,93 +3,29 @@
 <html>
 <head>
   <meta charset="utf-8">
-
   <style>
-    div, ul, li { margin:0; padding:0; }
-    #Menu {
-      display:inline-block;  /*가운데 정렬*/
-      margin:0px 5px 3px 5px;
-      padding:0 0 3px 0;
-      box-shadow: 0px 0px 15px rgba(0,0,0,.3);
-      -moz-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
-      -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
-      -o-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
-      -moz-border-radius: 3px;
-      -khtml-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      background-color:#5c5c5c; /*메뉴바 전체 색깔*/
-    }
-
-    #Menu ul li {
-      float:left; /*메뉴는 왼쪽부터 정렬*/
-      list-style-type:none;
-    }
-
-    #Menu a {
-      height:16px;
-      color:#f1f1f1; /*메뉴바에 마우스를 올려놓지 않았을 때의 원래 색깔*/
-      font-family:arial;
-      font-size:12px;
-      padding:0 10px 0 10px;
-      text-decoration:none;
-    }
-
-    #Menu a:hover {
-      color:#000000; /*메뉴바에 마우스를 올려놨을때 변하는 색깔*/
-      border-bottom:3px solid #00FF39; /*메뉴베에 마우스를 올려놓았을 때 아래에 생기는 밑줄 색깔*/
-    }
-
-    #Menu ul ul {
-      display:none;
-      position:absolute;
-      background-color:#000000; /*메뉴바에 마우스를 올려놓았을 때 하위 메뉴의 배경색깔*/
-    }
-
-    #Menu ul li:hover ul {
-      display: block;
-    }
-
-    #Menu ul ul li {
-      float:none;
-    }
+  #div1 {width:350px;height:135px;padding:10px;border:1px solid #999;}
   </style>
 
-
-  <! 메뉴바 속성>
-  <center>
-    <div id="Menu">
-      <ul>
-        <li><a href="#"><img src="https://cdn.pixabay.com/photo/2012/04/13/13/01/capitol-32309_1280.png" witch="30px" height="30px"></a></li>
-
-        <li><a href="#">통신사</a>
-          <ul>
-            <li><a href="#"><img src="https://image.edaily.co.kr/images/Photo/files/NP/S/2020/10/PS20102600847.jpg" witch="30px" height="30px"></a></li>
-            <li><a href="#"><img src="https://www.econovill.com/news/photo/201403/166720_1.png" witch="30px" height="30px"></a></li>
-            <li><a href="#"><img src="https://i1.wp.com/www.gsma.com/iot/wp-content/uploads/2017/09/LGU.png?ssl=1" witch="30px" height="30px"></a></li>
-          </ul>
-
-        </li>
-
-        <li><a href="#"><img src="https://cdn.pixabay.com/photo/2012/04/13/13/01/capitol-32309_1280.png" witch="30px" height="30px"></a>
-          <ul>
-            <li><a href="#">소득별</a></li>
-            <li><a href="#">연령별</a></li>
-            <li><a href="#">기타</a></li>
-          </ul>
-
-        </li>
-
-        <li><a href="#">Menu 4</a></li>
-        <li><a href="#">Menu 5</a></li>
-      </ul>
-    </div>
-  </center>
-  </SPAN>
-
+  <script>
+  function allowDrop(ev) {
+    ev.preventdefault();
+  }
+  funtion drag(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  function drop(ev){
+    ev.preventDefault();
+    var data = ev.dataTranasfer.getData("text");
+    ev.target.appendChild(document.getElementByld(data));
+  }
+  </script>
   </head>
 
 <body>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <img id="drag1" src="D:\Individual Data\BUSINESS\SIte제작\Logo&Icon\최종Logo.png" draggable="true" ondragstart"drag(event)" width="128" height="128">
   </body>
+
 
 </html>
