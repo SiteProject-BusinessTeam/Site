@@ -1,11 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <title></title>
 
-  <! 메뉴바 스타일>
   <style>
     div, ul, li { margin:0; padding:0; }
     #Menu {
@@ -20,17 +18,17 @@
       -khtml-border-radius: 3px;
       -webkit-border-radius: 3px;
       border-radius: 3px;
-      background-color:#5c5c5c;
+      background-color:#5c5c5c; /*메뉴바 전체 색깔*/
     }
 
     #Menu ul li {
-      float:left;
+      float:left; /*메뉴는 왼쪽부터 정렬*/
       list-style-type:none;
     }
 
     #Menu a {
       height:16px;
-      color:#f1f1f1;
+      color:#f1f1f1; /*메뉴바에 마우스를 올려놓지 않았을 때의 원래 색깔*/
       font-family:arial;
       font-size:12px;
       padding:0 10px 0 10px;
@@ -38,14 +36,14 @@
     }
 
     #Menu a:hover {
-      color:#D4F4FA;
-      border-bottom:3px solid #FAED7D;
+      color:#000000; /*메뉴바에 마우스를 올려놨을때 변하는 색깔*/
+      border-bottom:3px solid #00FF39; /*메뉴베에 마우스를 올려놓았을 때 아래에 생기는 밑줄 색깔*/
     }
 
     #Menu ul ul {
       display:none;
       position:absolute;
-      background-color:#5c5c5c;
+      background-color:#000000; /*메뉴바에 마우스를 올려놓았을 때 하위 메뉴의 배경색깔*/
     }
 
     #Menu ul li:hover ul {
@@ -88,9 +86,10 @@
     </div>
   </center>
   </SPAN>
-</head>
+
+  </head>
 
 <body>
-</body>
+  </body>
 
 </html>
