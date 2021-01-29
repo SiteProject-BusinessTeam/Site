@@ -1,31 +1,20 @@
 <! 다양한 코드 실행해보는 파일-김지호>
 <!DOCTYPE html>
+
+
 <html>
-
-<body>
-  
-  <style>
-        .container {
-          width: 500px;
-          height: 500px;
-          background: #55efc4;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container"></div>
-
-      <style>
+  <head>
+    <style>
       .container {
         width: 500px;
         height: 500px;
         background: #55efc4;
       }
       .go {
-        transform: translate(50%, 3em);
+        transform: rotate(30deg);
       }
     </style>
-
+  </head>
   <body>
     <div class="container" onclick="move()"></div>
     <script>
@@ -33,13 +22,5 @@
         document.querySelector(".container").classList.add("go");
       }
     </script>
-
-
-
-
-
-
-
   </body>
-
 </html>
