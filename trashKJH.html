@@ -1,31 +1,75 @@
 <! 다양한 코드 실행해보는 파일-김지호>
 <!DOCTYPE html>
 
+<body>
+  <style>
 
-<html>
-  <head>
-    <style>
-      .container {
-        width: 500px;
-        height: 500px;
-        background: #55efc4;
-      }
-      .go {
-        background: #d63031;
-   border-radius: 80px;
-   transform: translate(300px, 300px) rotate(180deg);
-   transition-property: all;
-   transition-duration: 2s;
-   transition-delay: 1s; 
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container" onclick="move()"></div>
-    <script>
-      function move() {
-        document.querySelector(".container").classList.add("go");
-      }
-    </script>
-  </body>
-</html>
+
+var circleArr = [];
+var r = 25;
+
+$(function () {
+    //초기 세팅
+    for (i = 0; i < $(".circle").length; i++) {
+        var circle = $($(".circle")[i])
+        var idx = circle.attr("idx");
+        var x = circle.offset().left;
+        var y = circle.offset().top;
+
+        var left = circle.css("left");
+        var top = circle.css("top");
+        circleArr[idx] = { x: x, y: y, left: left, top: top };
+    }
+});
+
+$(".circle").draggable({
+    containment: "parent",
+    start: function (event, ui) {
+
+    },
+    stop: function (event, ui) {
+        var idx = $(this).attr("idx");
+        var left = $(this).css("left");
+        var top = $(this).css("top");
+        var x = $(this).offset().left;
+        var y = $(this).offset().top;
+
+        var centerX = x + r;
+        var centerY = y + r;
+
+        var thisObj = { x: centerX, y: centerY, idx: idx };
+        if (overLapChecker(".circle", thisObj)) {
+            //통과
+            circleArr[idx] = { x: x, y: y, left: left, top: top };
+        } else {
+            //겹침
+            var obj = circleArr[idx];
+            $(".circle[idx=" + idx + "]").css("top", obj.top);
+            $(".circle[idx=" + idx + "]").css("left", obj.left);
+        }
+    }
+});
+
+function overLapChecker(className, thisObj) {
+    var len = $(className).length;
+    for (i = 0; i < len; i++) {
+        var idx = $($(className)[i]).attr("idx");
+        if (idx == thisObj.idx) {
+            continue;
+        } else {
+            var x = circleArr[idx].x + r;
+            var y = circleArr[idx].y + r;
+            var thisX = thisObj.x;
+            var thisY = thisObj.y;
+
+            var distance = Math.sqrt(Math.pow((x - thisX), 2) + Math.pow((y - thisY), 2));
+            if ((r * 2) >= distance) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+</style>
+</body>
