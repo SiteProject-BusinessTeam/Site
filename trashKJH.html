@@ -1,25 +1,57 @@
 <! 다양한 코드 실행해보는 파일-김지호>
-<div style="color: red; font-size: 70px; font-weight: 900; height: 100px; position: relative;">
-서현아 안녕?
-</div>
-<div style="color: Orange; font-size: 70px; font-weight: 900; height: 100px; position: relative; left: 5px;  top: -95px;">
-서현아 안녕?
-</div>
-<div style="color: yellow; font-size: 70px; font-weight: 900; height: 100px; position: relative;">
-서현아 뭐해?
-</div>
-<div style="color: Green; font-size: 70px; font-weight: 900; height: 100px; position: relative; left: 5px;  top: -95px;">
-서현아 뭐해?
-</div>
-<div style="color: blue; font-size: 70px; font-weight: 900; height: 100px; position: relative;">
-서현아 나 일하고 있어
-</div>
-<div style="color: Indigo; font-size: 70px; font-weight: 900; height: 100px; position: relative; left: 5px;  top: -95px;">
-서현아 나 일하고 있어
-</div>
-<div style="color: Purple; font-size: 70px; font-weight: 900; height: 100px; position: relative;">
-서현아 밥 맛있게 먹어
-</div>
-<div style="color: pink; font-size: 70px; font-weight: 900; height: 100px; position: relative; left: 5px;  top: -95px;">
-서현아 밥 맛있게 먹어
-</div>
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS</title>
+		<style>
+			.jb-wrap {
+				width: 40%;
+				margin: 0px auto;
+				position: relative;
+			}
+			.jb-wrap img {
+				width: 100%;
+				vertical-align: middle;
+			}
+			.jb-text {
+				position: absolute;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+			}
+			.jb-text-table {
+				display: table;
+				width: 100%;
+				height: 100%;
+			}
+			.jb-text-table-row {
+				display: table-row;
+			}
+			.jb-text-table-cell {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.jb-text p {
+				margin: 0px 40px;
+				padding: 10px;
+				background-color: #ffffff;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="jb-wrap">
+			<div class="jb-image"><img src="images/400x300.png" alt=""></div>
+			<div class="jb-text">
+				<div class="jb-text-table">
+					<div class="jb-text-table-row">
+						<div class="jb-text-table-cell">
+							<p>HELLO</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
