@@ -17,6 +17,25 @@
     <body>
       <div class="container"></div>
 
+      <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background: #55efc4;
+      }
+      .go {
+        transform: /* 속성 추가할 부분 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" onclick="move()"></div>
+    <script>
+      function move() {
+        document.querySelector(".container").classList.add("go");
+      }
+    </script>
+
 
 
 
