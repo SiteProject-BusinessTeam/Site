@@ -2,15 +2,199 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-    /*LOGO사진을 링크에 넣어야함. 임시로 사진가져다놓음*/
-    <a href="main.html"><img src="https://cdn.pixabay.com/photo/2013/11/10/23/42/skull-208586_1280.jpg" witch="50px" height="50px"></a>
+	<meta charset="utf-8">
+	<!LOGO사진을 링크에 넣어야함. 임시로 사진가져다놓음>
+	<a href="main.html"><img src="https://cdn.pixabay.com/photo/2013/11/10/23/42/skull-208586_1280.jpg" witch="100px" height="50px"></a>
+	<style>
+  /*메뉴바 속성 정의*/
+	div,
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+	}
 
+	#Menu {
+		display: inline-block;	/*가운데 정렬*/
+		margin: 0px 0px 0px 0px; /*위쪽, 오른쪽, 아래, 왼쪽 마진*/
+		padding: 3px 100px 3px 100px; /*메뉴바 위쪽, 오른쪽, 아래, 왼쪽 길이 조절*/
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+		-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+		-o-box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+		-moz-border-radius: 3px;
+		-khtml-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 20px; /*모깎기*/
+		background-color: #5c5c5c;	/*메뉴바 전체 색깔*/
+	}
+
+	#Menu ul li {
+		float: left;	/*메뉴는 왼쪽부터 정렬*/
+		list-style-type: none;
+	}
+
+	#Menu a {
+		height: 16px;
+		color: #f1f1f1; /*메뉴바에 마우스를 올려놓지 않았을 때의 원래 색깔*/
+		font-family: arial;
+		font-size: 12px;
+		padding: 0 10px 0 10px;
+		text-decoration: none;
+	}
+
+	#Menu a:hover {
+		color: #000000; /*메뉴바에 마우스를 올려놨을때 변하는 색깔*/
+		border-bottom: 3px solid #00FF39;	/*메뉴베에 마우스를 올려놓았을 때 아래에 생기는 밑줄 색깔*/
+	}
+
+	#Menu ul ul {
+		display: none;
+		position: absolute;
+		background-color: #000000;	/*메뉴바에 마우스를 올려놓았을 때 하위 메뉴의 배경색깔*/
+	}
+
+	#Menu ul li:hover ul {
+		display: block;
+	}
+
+	#Menu ul ul li {
+		float: none;
+	}
+	</style>
+
+
+	<center>
+		<div id="Menu">
+      	<! 메뉴바 속성>
+			<ul>
+<!메뉴바 메뉴 분리>
+				<li>
+					<a href="#"><img src="https://cdn.pixabay.com/photo/2012/04/13/13/01/capitol-32309_1280.png" witch="30px" height="30px"></a>
+				</li>
+<!메뉴바 메뉴 분리>
+        <li><a href="#">통신사</a>
+					<ul>
+						<li>
+							<a href="#"><img src="https://image.edaily.co.kr/images/Photo/files/NP/S/2020/10/PS20102600847.jpg" witch="30px" height="30px"></a>
+						</li>
+						<li>
+							<a href="#"><img src="https://www.econovill.com/news/photo/201403/166720_1.png" witch="30px" height="30px"></a>
+						</li>
+						<li>
+							<a href="#"><img src="https://i1.wp.com/www.gsma.com/iot/wp-content/uploads/2017/09/LGU.png?ssl=1" witch="30px" height="30px"></a>
+						</li>
+					</ul>
+				</li>
+<!메뉴바 메뉴 분리>
+        <li>
+					<a href="#">정부혜택</a>
+					<ul>
+						<li><a href="#">소득별</a></li>
+						<li><a href="#">연령별</a></li>
+						<li><a href="#">기타</a></li>
+					</ul>
+				</li>
+<!메뉴바 메뉴 분리>
+				<li><a href="#">Menu 4</a></li>
+<!메뉴바 메뉴 분리>
+				<li><a href="#">Menu 5</a></li>
+			</ul>
+		</div>
+	</center>
+	</SPAN>
 </head>
 
 <body>
-  <h2>hello-kjh</h2>
+
+  <style>
+  .square{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 30px;
+    background-color: pink;
+    display: inline-block; /*해당 문구로 한 줄에 표시*/
+    text-align: center;
+    line-height: 200px;
+}
+  </style>
+  <div class="square" > 광고  </div>
+<div> <!div로 묶어 그룹화>
+  <style>
+  .circle1{ /*첫번재 줄은 circle1, 두번째줄은 circle2로 정함*/
+    width:200px;
+    height:300px;
+    border-radius: 10%;
+    background:#00d3de;
+    display: inline-block;/*해당 문구로 한 줄에 표시*/
+    text-align: center;
+    line-height: 300px;
+}
+  </style>
+  <div class="circle1" > (사이트 이름) 소개 </div>
+
+  <style>
+  .circle1{
+    width:200px;
+    height:300px;
+    border-radius: 10%;
+    background:#00d3de;
+    display: inline-block;/*해당 문구로 한 줄에 표시*/
+   text-align: center;
+   line-height: 300px;
+}
+  </style>
+  <div class="circle1" > 사이트 이용방법 </div>
+</div>
+
+<div>
+  <style>
+  .circle2-1{
+    width:200px;
+    height:300px;
+    border-radius: 10%;
+    background:#00d3de;
+    clear:left;
+    margin-top: 30px;
+    margin-left: 175px;
+    margin-right:20px;
+    text-align: center;
+    line-height: 300px;
+}
+  </style>
+  <div class="circle2" > 공지사항 </div>
+
+  <style>
+  .circle2{
+    width:200px;
+    height:300px;
+    border-radius: 10%;
+    background:#00d3de;
+    margin-top: 30px;
+    display: inline-block;/*해당 문구로 한 줄에 표시*/
+    text-align: center;
+    line-height: 300px;
+
+}
+  </style>
+  <div class="circle2" > 이 달의 소식 </div>
+</div>
+
+  <p>
+    <hr style="border: solid 1px black">
+    <p style="text-align:center;">
+      <!사이트맵 작성>
+  </p>
+
+<!하단에 넣을 기업 정보>
+<p>
+  <hr style="border: solid 1px black">
+  <p style="text-align:center;">
+  기업 정보 : Name
+  대표 : Name
+  기업 정보 : Name
+  기업 정보 : Name
+</p>
 </body>
 
 </html>
