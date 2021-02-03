@@ -1,25 +1,6 @@
 <! 다양한 코드 실행해보는 파일-김지호>
 
-<html>
-<head>
-<meta charset="utf-8" />
-<title>float</title>
-<style>
-ul{width:650px;height:40px;background:grey;list-style:none;padding-top:15px}
-ul li{float:left;margin-right:100px;font-family:dotum}
-ul li a{font-size:12px;color:white;font-weight:bold;text-decoration:none}
-.white a{color:#fff}
-</style>
-</head>
-<body>
-<ul>
-<li><a href="#">카드 회사</a></li>
-<li><a href="#">카드 계열</a></li>
-<li><a href="#">카드 이름</a></li>
-<li><a href="#">기타</a></li>
-</ul>
-</body>
-</html>
+
 <html>
 
   <head>
@@ -33,7 +14,7 @@ ul li a{font-size:12px;color:white;font-weight:bold;text-decoration:none}
                 width: 70%;/* 바깥 사각형의 X축 길이*/
                 height: 70%;/* 바깥 사각형의 Y축 길이*/
                 margin: 100px auto;/*전체 사각형들의 Y축 위치*/
-                background: green;/* 바깥 사각형의 색깔*/
+                background: #BA55D3;/* 바깥 사각형의 색깔*/
             }
             .outer {
                 display: table;
@@ -50,16 +31,16 @@ ul li a{font-size:12px;color:white;font-weight:bold;text-decoration:none}
                 display: inline-block;
                 width: 50%;/*안쪽 사각형의 X축 길이*/
                 padding: 1em;/*안쪽 사각형의 넓이의 축소 확대*/
-                background: orange;/*안쪽 사각형의 색깔*/
+                background: #E0FFFF;/*안쪽 사각형의 색깔*/
                 color: blue;/*안쪽, 제일 작은 사각형의 글자 색깔*/
             }
             .badge {
                 position: absolute;
                 right: -30px;/*제일 작은 사각형의 오른쪽 위치*/
                 top: -15px;/*제일 작은 사각형의 높낮이*/
-                background: red;/*제일 작은 사각형의 색깔*/
+                background: #E6E6FA;/*제일 작은 사각형의 색깔*/
                 width: 60px;/*제일 작은 사각형의 X축 위치*/
-                height: 30px;/*제일 작은 사각형의 Y축 위치*/
+                height: 60px;/*제일 작은 사각형의 Y축 위치*/
                 line-height: 30px;/*제일 작은 사각형의 글씨 Y축 위치*/
             }
         </style>
@@ -69,11 +50,59 @@ ul li a{font-size:12px;color:white;font-weight:bold;text-decoration:none}
             <div class="outer">
                 <div class="inner">
                     <div class="centered">
-                        <p>안녕~~~~~~~</p>
-                        <div class="badge">NEW</div>
+                        <p>미친 사장</p>
+                        <div class="badge">그냥 죽여라</div>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color:white;
+    text-align: center;
+}
+nav{
+    position: absolute;
+    width:100%;
+    top: 5%;/* 메뉴바 상단위치*/
+    left: 50%;/*메뉴바 왼쪽 위치*/
+    transform: translate(-50%, -50%);
+}
+.box{
+    text-decoration: none;
+    color : #000000;
+    background: transparent;
+    padding: 20px 30px;
+    border-radius: 10px;/* 모서리각의 크기*/
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+    border: 2px solid #00FFFF;
+    margin:  0 10px ;
+}
+.box:hover{
+    border:0;
+    box-shadow: 0 0 4px #32F1FF, 0 0 6px #32F1FF, 0 0 15px #32F1FF;
+}
+</style>
+<body>
+    <nav>
+        <a href="#" class="box">menu1 </a>
+        <a href="#" class="box">menu2 </a>
+        <a href="#" class="box">menu3 </a>
+        <a href="#" class="box">menu4 </a>
+        <a href="#" class="box">menu5 </a>
+    </nav>
+
+
+</body>
 </html>
